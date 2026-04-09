@@ -3,25 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> مدبِّر | إدارة أموالك بذكاء </title>
+    <title> مدبِّر | إدارة أموالك بذكاء </title>
     <link rel="icon" type="image/x-icon" href="./imgs/favicon.png">
     <link rel="stylesheet" href="./Css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Css/mediaquery.css">
 
 </head>
 <body>
+<div class="dashboard">
 <header>
-<!-- navbar start -->
 
-    <div id="navBar">
+    <!-- Sidebar -->
+<div class="sidebar" dir="rtl">
+  <ul>
+    <li><a href="index.html"><img src="./imgs/coins-solid-full.png" alt="Coins"><span></span></a></li>
+
+    <li><a href="./index.html"><img src="./imgs/house-solid-full.png" alt="Home"><span></span></a></li>
+
+    <li><a href="#"><img src="./imgs/arrow-right-arrow-left-solid-full.png" alt="Transactions"><span></span></a></li>
+
+    <li><a href="#"><img src="./imgs/chart-pie-solid-full.png" alt="Add"><span></span></a></li>
+
+
+    <li><a href=".bills"><img src="imgs/piggy-bank-solid.png" alt="Receipt"><span></span></a></li>
+    <li><a href="#"><img src="./imgs/file-invoice-dollar-solid-full.png" alt="Graph"><span></span></a></li>
+
+     <li><a href="#"><img src="./imgs/paper-plane-solid-full.png" alt="Graph"><span></span></a></li>
+
+       <li><a href="#"><img src="./imgs/plus-solid-full.png" alt="Graph"><span></span></a></li>
+
+         <li><a href="#"><img src="./imgs/receipt-solid-full.png" alt="Graph"><span></span></a></li>
+
+      <li><a href="#"><img src="./imgs/chart-line-solid-full.png" alt="Graph"><span></span></a></li>     
+  </ul>
+</div>
+
+<!-- navbar start -->
+  <div style="grid-area: div1;">
+    <div class="navBar">
         <nav id="items">
             <div class="logo">
                 <img src="./imgs/coins-solid-full.png" alt="coins logo">
                 </div>
                 <div class="textWrap">
-                        <h2 class="h-logo"> مدبِّر </h2>
+                        <h2 class="h-logo"> مدبِّر </h2>
                         <p>إدارة أموالك بذكاء</p>  
                 </div>
 
@@ -46,6 +74,11 @@
 
                 <!-- Left: Profile picture -->
                 <div class="profile">
+                    <div>
+                       <p style="color: black; font-weight: 600;">سيف أسامة</p> 
+                       <p style="color: rgba(128, 128, 128, 0.716);">حساب مميز</p>
+                    </div>
+                    
                     <img src="./imgs/avatar-1.jpg" alt="Profile Picture">
                 </div>
             </div>
@@ -57,42 +90,73 @@
         </div>  
        
     </div> 
+    </div>
 <!-- navbar end -->
 </header>
 
     <main>
     <!--main container start-->
-    <div id="m-container">   
+    <div>   
 
         <!-- //////section-1 start///// -->
 
-        <div class="expenses-1">
+        <div class="expenses-1 div2">
 
             <div class="current">
                 <p>الرصيد الحالي</p>
                 <h2>8,450 جنية</h2>
                 <span>↑+2.5%</span>
             </div>
-        </div>   
-        <div class="expenses-1"> 
+
             <div class="salary">
                 <p>الدخل</p>
                 <h2>15,000 جنية</h2>
                 <span>↑+8.2%</span>
             </div>
-        </div>
-        <div class="expenses-1">
-            <div class="monthly-expenses">
+
+            <div class="monthly-expenses div5">
                 <p>المصروفات</p>
                 <h2>10,000 جنية </h2>
                 <span class="negative">↓-1.2%</span>
             </div>
 
-        </div>
-
+        </div>   
+       
+       
 
         <!-- //////section end///// -->
+        <div class="div3">
+              <div class="analysis-6">
+              <div class="title-4">
+                <h3> الدخل مقابل المصروفات </h3>
+                <button>
+                عرض الكل > 
+                </button>
+               </div> 
+           
+               <section class="analysis-section">
+            <div class="chart">
+            <div class="bar-group">
+                <div class="bar income week1"></div>
+                <div class="bar expense week1"></div>
+            </div>
 
+        <div class="bar-group">
+            <div class="bar income week2"></div>
+            <div class="bar expense week2"></div>
+        </div>
+        <div class="bar-group">
+            <div class="bar income week3"></div>
+            <div class="bar expense week3"></div>
+        </div>
+        </div>
+        </section>
+        <div class="week-label">
+           <p>الأسبوع 1</p>
+        <p>الأسبوع 2</p>
+        <p>الأسبوع 3</p>  
+        </div>
+    </div>
         <div class="activity-2">
 
             <h3>الأنشطة الحديثة</h3>
@@ -113,7 +177,8 @@
             <p class="banner">حساب</p>
 
             <!-- card2 -->
-            <div class="savingAcc-2">
+            <div class="savingAcc-2 ">
+
                <span> <img src="./imgs/credit-card-solid-full-green.png" alt="add sign">
                 </span>
             
@@ -123,18 +188,18 @@
                     <p>تمت إضافة بطاقة Visa الجديدة ****2847</p>
                     <p>منذ 3 ساعات </p>
                     </div>
+                    <p class="banner-2">بطاقة</p>
+
                 </div>
-            <p class="banner-2">بطاقة</p>
-
-                </div>    
-                <hr> 
                 <button class="btn23">عرض جميع الأنشطة (23)</button>
+
+            </div>  
+         
             </div>
-
+            
+</div>
         </div>
-
         <!-- //////section end///// -->
-
         <div class="transactions-3">
                <div class="title-3">
                 <h3>الأنشطة الحديثة</h3>
@@ -144,7 +209,7 @@
                </div> 
 
    
-<table>
+<table class="div10">
   <thead>
     <tr>
       <th>المعاملة</th>
@@ -189,10 +254,11 @@
             </div>
             
         </td>
-      <td><img src="./imgs/utensils-solid-full.png" alt="food" class="category-icon"> طعام</td>
-      <td>14 أكتوبر 2025</td>
-<td class="status-complete">
-        <p>مكتمل</p></td>      <td class="amount-negative">2200 جنيه</td>
+        <td><img src="./imgs/utensils-solid-full.png" alt="food" class="category-icon"> طعام</td>
+        <td>14 أكتوبر 2025</td>
+        <td class="status-complete">
+        <p>مكتمل</p></td>      
+        <td class="amount-negative">2200 جنيه</td>
     </tr>
     <tr>
     <td>
@@ -332,187 +398,10 @@
     </tr>
   </tbody>
 </table>
-    </div>
 
         <!-- //////section end///// -->
-
-        <div class="bills-4">
-             <div class="title-4">
-                <h3>الفواتير الشهرية </h3>
-                <button>
-                عرض الكل > 
-                </button>
-               </div> 
-
-               <h4>1920 جنية</h4>
-               <p>إجمالي الفواتير الشهرية</p>
-
-               <div class="B-boxes">
-                <div class="box-1">
-                    <img src="./imgs/wifi-solid-full.png" alt="">                
-                    <p>إنترنت</p> 
-                    <h4>450 جنية</h4>  
-                    <p class="due">يستحق في 3 أيام</p>
-                </div>
-                <div class="box-2">
-                    <img src="./imgs/bolt-solid-full.png" alt="">                
-                    <p>كهرباء</p> 
-                    <h4>400 جنية</h4>  
-                    <p class="due">يستحق في 5 أيام</p>
-                </div>
-               </div>
-                <div class="B-boxes">
-                 <div class="box-3">
-                    <img class="green" src="./imgs/phone-solid-full.png" alt="">                
-                    <p>هاتف</p> 
-                    <h4>290 جنية</h4>  
-                    <p class="due">يستحق في 10 أيام</p>
-                </div>
-
-                  <div class="box-4">
-                    <img src="./imgs/tv-solid-full-red.png" alt="">                
-                    <p>Netflix</p> 
-                    <h4>780 جنية</h4>  
-                    <p class="due">يستحق في 15 يوم</p>
-                </div>
-                </div>
-        </div>
-
-        <!-- //////section end///// -->
-
-        <div class="budget-5">
-             <div class="title-4">
-                <h3>الفواتير الشهرية </h3>
-                <button>
-                عرض الكل > 
-                </button>
-               </div> 
-
-                <div class="savingAcc-1">
-                <div class="wrap-1">
-                    <p class="total">إجمالي الميزانية</p>
-                    <h3>10000 جنية</h3>
-                    <p>المستخدم: 8250 جنية</p>
-                    </div>
-
-                    <div class="wrap-2">
-                    <p>المتبقي </p>
-                    <h3>1750 جنية </h3>
-                    <p>82.5%</p>
-                    </div>
-                </div>
-
-                <div class="loading-container">
-                <div class="loading-line"></div>
-                </div>
-
-                <!-- 2nd card -->
-
-                <div class="savingAcc-3">
-                   <div class="wrap-1">
-                    <p class="tarfeh">ترفيه</p>
-                    <p class="total">الميزانية: 1500 جنية</p>
-                    </div>
-
-                    <div class="wrap-2">
-                    <h3>1750 جنية </h3>
-                    <p>متبقي 50%</p>
-                    </div>
-                </div>
-                <div class="loading-container1">
-                <div class="loading-line1"></div>
-                </div>
-                 <!-- 3rd card -->
-
-                <div class="savingAcc-3">
-                   <div class="wrap-1">
-                    <p class="tarfeh">فواتير</p>
-                    <p class="total">الميزانية: 2000 جنية</p>
-                    </div>
-
-                    <div class="wrap-2">
-                    <h3>2000 جنية </h3>
-                    <p>مستخدم 100%</p>
-                    </div>
-                </div>
-                <div class="loading-container2">
-                <div class="loading-line1"></div>
-                </div>
-                
-                <!-- 4th card -->
-
-                <div class="savingAcc-4">
-                   <div class="wrap-1">
-                    <p class="tarfeh">العناية الشخصية</p>
-                    <p class="total">الميزانية: 1500 جنية</p>
-                    </div>
-
-                    <div class="wrap-2">
-                    <h3>1200 جنية </h3>
-                    <p> متبقي 20%</p>
-                    </div>
-                </div>
-                <div class="loading-container4">
-                <div class="loading-line1"></div>
-                </div>
-
-                      <!-- 5th card -->
-
-                <div class="savingAcc-5">
-                   <div class="wrap-1">
-                    <p class="tarfeh">مستلزمات المنزل</p>
-                    <p class="total">الميزانية: 5000 جنية</p>
-                    </div>
-
-                    <div class="wrap-2">
-                    <h3>4300 جنية </h3>
-                    <p>متبقي 14%</p>
-                    </div>
-                </div>
-                <div class="loading-container5">
-                <div class="loading-line1"></div>
-                </div>
-        </div>
-
-        <!-- //////section end///// -->
-
-    <div class="analysis-6">
-              <div class="title-4">
-                <h3> الدخل مقابل المصروفات </h3>
-                <button>
-                عرض الكل > 
-                </button>
-               </div> 
-           
-               <section class="analysis-section">
-            <h2>تحليل الدخل والمصروفات</h2>
-            <div class="chart">
-            <div class="bar-group">
-                <div class="bar expense week1"></div>
-                <div class="bar income week1"></div>
-            </div>
-
-        <div class="bar-group">
-            <div class="bar income week2"></div>
-            <div class="bar expense week2"></div>
-        </div>
-        <div class="bar-group">
-            <div class="bar income week3"></div>
-            <div class="bar expense week3"></div>
-        </div>
-        </div>
-        </section>
-        <div class="week-label">
-           <p>الأسبوع 1</p>
-        <p>الأسبوع 2</p>
-        <p>الأسبوع 3</p>  
-        </div>
-       
-    </div>
-
-        <!-- //////section end///// -->
-
-        <div class="summary-7">
+<div class="div4">
+       <div class="summary-7">
               <div class="title-4">
                 <h3> ملخص الحساب </h3>
                 <button>
@@ -522,7 +411,7 @@
 
                   <!-- card1 -->
 
-            <div class="savingAcc-6">
+            <div class="savingAcc-6 div5">
                <span> <img src="./imgs/building-columns-solid-full.png" alt="bank sign">
                 </span>
             
@@ -560,18 +449,165 @@
                     <p>متاح: 1,850 جنية من 2,500 جنية </p>
                     </div>
                 </div>
-                 <p class="summary-3">6,000 جنية</p>
-        </div>
-        </div>
+                 <p class="summary-3">-6,000 جنية</p>
         </div>
 
+
+        <!-- new section -->
+         <div class="div5">
+        <div class="bills-4">
+             <div class="title-4" >
+                <h3 >الفواتير الشهرية </h3>
+                <button>
+                عرض الكل > 
+                </button>
+               </div> 
+
+               <h4 >1920 جنية</h4>
+               <p >إجمالي الفواتير الشهرية</p>
+
+               <div class="B-boxes" >
+                <div class="box-1">
+                    <img src="./imgs/wifi-solid-full.png" alt="">                
+                    <p>إنترنت</p> 
+                    <h4>450 جنية</h4>  
+                    <p class="due">يستحق في 3 أيام</p>
+                </div>
+                <div class="box-2">
+                    <img src="./imgs/bolt-solid-full.png" alt="">                
+                    <p>كهرباء</p> 
+                    <h4>400 جنية</h4>  
+                    <p class="due">يستحق في 5 أيام</p>
+                </div>
+               </div>
+                <div class="B-boxes">
+                 <div class="box-3">
+                    <img class="green" src="./imgs/phone-solid-full.png" alt="">                
+                    <p>هاتف</p> 
+                    <h4>290 جنية</h4>  
+                    <p class="due">يستحق في 10 أيام</p>
+                </div>
+
+                  <div class="box-4">
+                    <img src="./imgs/tv-solid-full-red.png" alt="">                
+                    <p>Netflix</p> 
+                    <h4>780 جنية</h4>  
+                    <p class="due">يستحق في 15 يوم</p>
+                </div>
+                </div>
+
+          </div>    
+        </div>
+
+        <!-- //////section end///// -->
+
+        <div class="budget-5">
+             <div class="title-4">
+                <h3>نظرة عامة على الميزانية  </h3>
+                <button>
+                عرض الكل > 
+                </button>
+               </div> 
+
+                <div class="savingAcc-1">
+                <div class="wrap-1">
+                    <p class="total">إجمالي الميزانية</p>
+                    <h3>10000 جنية</h3>
+                    <p>المستخدم: 8250 جنية</p>
+                    </div>
+
+                    <div class="wrap-2">
+                    <p>المتبقي </p>
+                    <h3>1750 جنية </h3>
+                    <p>82.5%</p>
+                    </div>
+                </div>
+
+                <div class="loading-container">
+                <div class="loading-line"></div>
+                </div>
+
+                <!-- 2nd card -->
+
+                <div class="savingAcc-3">
+                   <div class="wrap-1">
+                    <p class="tarfeh">ترفيه</p>
+                    <p class="total">الميزانية: 1500 جنية</p>
+                    </div>
+
+                    <div class="wrap-2">
+                    <h3>1750 جنية </h3>
+                    <p style="color: green; background-color: #dcfce6; border-radius: 20%; font-size: 10px; text-align: center;">متبقي 50%</p>
+                    </div>
+                </div>
+                <div class="loading-container1">
+                <div class="loading-line1"></div>
+                </div>
+                 <!-- 3rd card -->
+
+                <div class="savingAcc-3">
+                   <div class="wrap-1">
+                    <p class="tarfeh">فواتير</p>
+                    <p class="total">الميزانية: 2000 جنية</p>
+                    </div>
+
+                    <div class="wrap-2">
+                    <h3>2000 جنية </h3>
+                    <p style="color: blue; background-color: #87cefab4; border-radius: 20%; font-size: 10px; text-align: center;">مستخدم 100%</p>
+                    </div>
+                </div>
+                <div class="loading-container2">
+                <div class="loading-line1"></div>
+                </div>
+                
+                <!-- 4th card -->
+
+                <div class="savingAcc-4">
+                   <div class="wrap-1">
+                    <p class="tarfeh">العناية الشخصية</p>
+                    <p class="total">الميزانية: 1500 جنية</p>
+                    </div>
+
+                    <div class="wrap-2">
+                    <h3>1200 جنية </h3>
+                    <p style="color: #92400D; background-color: #FEF3C7; border-radius: 20%; font-size: 10px; text-align: center;"> متبقي 20%</p>
+                    </div>
+                </div>
+                <div class="loading-container4">
+                <div class="loading-line1"></div>
+                </div>
+
+                      <!-- 5th card -->
+
+                <div class="savingAcc-5">
+                   <div class="wrap-1">
+                    <p class="tarfeh">مستلزمات المنزل</p>
+                    <p class="total">الميزانية: 5000 جنية</p>
+                    </div>
+
+                    <div class="wrap-2">
+                    <h3>4300 جنية </h3>
+                    <p style="color: green; background-color: #dcfce6; border-radius: 20%; font-size: 10px; text-align: center;">متبقي 14%</p>
+                    </div>
+                </div>
+                <div class="loading-container5">
+                <div class="loading-line1"></div>
+                </div>
+        </div>
+
+        <!-- //////section end///// -->
+  
+
+        <!-- //////section end///// -->
+
+       
         
 
         <!-- //////section end///// -->
 
         <div class="Pmethods-8">
              <div class="title-4">
-                <h3> ملخص الحساب </h3>
+                <h3> وسائل الدفع  </h3>
                 <button>
                 عرض الكل > 
                 </button>
@@ -646,5 +682,6 @@
 
     </div> <!--main container end-->
     </main> 
+    </div.parent>
 </body>
 </html>
